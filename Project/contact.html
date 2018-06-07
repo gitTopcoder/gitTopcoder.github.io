@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>联系我们</title>
+{literal}
+<style type="text/css">
+    *{font-family:Microsoft YaHei;}
+
+</style>
+{/literal}
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 标题图标 -->
+<link rel="bookmark"  type="image/x-icon"  href="{$smarty.const.image}/logo.ico"/>
+<link rel="shortcut icon" href="{$smarty.const.image}/logo.ico"> 
+<link rel="icon" href="{$smarty.const.image}/logo.ico">
+<!-- 标题图标 -->
+<link rel="stylesheet" href="{$smarty.const.css}/baguettebox.min.css">
+<link rel="stylesheet" href="{$smarty.const.css}/stylee.css">
+<link href="{$smarty.const.css}/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+<script src="{$smarty.const.js}/baguettebox.min.js"></script>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{$smarty.const.js}/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="{$smarty.const.css}/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="topcoder, tc, topcoder工作室, tc工作室, 算法, 项目, 南阳理工" />
+  {literal}
+<style>
+   input{
+   	border-radius: 4px;
+   }
+
+    @media (max-width: 768px){
+    	.footer-grid p{margin-bottom:-20px;}
+    	input{margin-bottom:15px;}
+    }
+     @media (max-width: 425px){
+     	.input{margin-bottom:30px;}
+     	.textarea{width:100%;}
+     	.text{width:300px;margin:0 auto;}
+     }
+     @media (max-width: 320px){
+     	.textarea{width:100%;}
+     	.text{width:270px;margin:0 auto;}
+     }
+      @media (max-width: 768px){
+      	.textarea{width:100%;}
+     	.text{margin:0 auto;}
+      }
+</style>
+   {/literal}
+<!--        <script type="text/javascript">
+   function display_alert()
+  {
+    alert("报名系统维护升级中。。。敬请期待")
+  }
+</script> -->
+
+</head>
+<body>
+<!--header start here-->
+<div class="header">
+	<div class="container head-nav-back">
+		<div class="header-main">
+			<div class="logo wow bounceIn" data-wow-delay="0.4s">
+				<a href="$smarty.const.__APP__}/Index/index.html"> <img src="{$smarty.const.images}/logo1.png" alt=""/> </a>
+			</div>
+			<div class="navg">
+				<span class="menu"> <img src="{$smarty.const.images}/icon.png" alt=""/></span>
+				<ul class="res"> 
+					<li><a href="{$smarty.const.__APP__}/Index/index">首页</a></li>
+					<li><a href="{$smarty.const.__APP__}/Project/about">简介</a></li>
+					<li><a href="{$smarty.const.__APP__}/Project/suanfa">算法</a></li>
+					<li><a href="{$smarty.const.__APP__}/Project/single">项目</a></li>
+					<li><a href="{$smarty.const.__APP__}/Project/project">相册</a></li>
+					<li><a class="active " href="{$smarty.const.__APP__}/Project/contact">加入我们</a></li>
+				</ul>
+                <script type="text/javascript">
+                              $( "span.menu").click(function() {
+                                                                $(  "ul.res" ).slideToggle("slow", function() {
+                                                                 // Animation complete.
+                                                                 });
+                                                                 });
+                              function check_qq(str)
+                              {
+                                var re = /^[1-9]{1}\d{4-9}$/
+                                if(re.test(str))
+                                {
+                                    document.getElementById('tishi').innerHTML='';
+                                }else{
+                                    document.getElementById('tishi').innerHTML='QQ号输入格式错误';
+                                }
+                              }
+                              function check_sno(str)
+                              {
+                                var re = /\d$/
+                                if(re.test(str))
+                                {
+                                    document.getElementById('tishi').innerHTML='';
+                                }else{
+                                    document.getElementById('tishi').innerHTML='学号输入格式错误';
+                                }
+                              }
+                              function check_phone(str)
+                              {
+                                // alert(str);
+                                var re = /^1\d{10}/
+                                if(re.test(str))
+                                {
+                                    document.getElementById('tishi').innerHTML='';
+                                }else{
+                                    document.getElementById('tishi').innerHTML='手机号输入错误';
+                                }
+                              }
+                              function check_all(form)
+                              {
+                                var n_name = form['n_name'].value;
+                                var n_sno = form['n_sno'].value;
+                                var n_grade = form['n_grade'].value;
+                                var n_qq = form['n_qq'].value;
+                                var n_phone = form['n_phone'].value;
+                                var n_why = form['n_why'].value;
+                                if(n_name == '')
+                                {
+                                    document.getElementById('tishi').innerHTML='记得输入姓名';
+                                    return false;
+                                }
+                                if(n_sno == '')
+                                {
+                                    document.getElementById('tishi').innerHTML='学号还没输入哦';
+                                    return false;
+                                }
+                                if(n_grade == '')
+                                {
+                                    document.getElementById('tishi').innerHTML='记得输入班级哦';
+                                    return false;
+                                }
+                                if(n_phone == '')
+                                {
+                                    document.getElementById('tishi').innerHTML='记得输入手机号';
+                                    return false;
+                                }
+                                if(n_qq == '')
+                                {
+                                    document.getElementById('tishi').innerHTML='记得输入QQ号';
+                                    return false;
+                                }
+                                if(n_why == '')
+                                {
+                                    document.getElementById('tishi').innerHTML='为什么加入我们呢？';
+                                    return false;
+                                }
+                                if(n_why.length < 15)
+                                {
+                                    document.getElementById('tishi').innerHTML='字数不够,请认真思考哦';
+                                    return false;
+                                }
+                              }
+
+                 </script>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--header end here-->
+<!--contact start here-->
+<div class="contact">
+	<div class="container">
+		<div class="contact-main">
+			<div class="contact-top">
+				<h3>加入我们</h3>
+				<p style="font-size:17px;">我们在7号教学楼116室&nbsp;&nbsp;TopCoder工作室等着你们！</p>
+			</div>
+			<div class="col-md-6 contact-left footer-grid wow bounceIn" data-wow-delay="0.4s">
+				<h3>我们的誓言</h3>
+				<h4>全力以赴，追求卓越</h4>
+				<p>空想会想出很多绝妙的主意，但却办不成任何事情。</p>
+                <p>当你还不能对自己说今天学到了什么东西时，你就不要去睡觉。</p>
+                <p>一个有信念者所开发出的力量，大于99个只有兴趣者。</p>
+
+			</div>
+			
+			<div class="col-md-6 contact-right footer-grid wow bounceIn" data-wow-delay="0.4s">
+				<h3>报名个人信息</h3>
+             <!--     -->
+				<form action="{$smarty.const.__SELF__}" onsubmit="return check_all(this)" method="post">{literal}
+					<input class="input" type="text" placeholder="姓名" name="n_name" />
+					<input type="text" placeholder="学号" name="n_sno"  onBlur="check_sno(this.value)"/>
+                	<input type="text" placeholder="班级" name="n_grade"  onBlur="check_sno(this.value)" />
+                	<input type="text" placeholder="QQ号" name="n_qq" onBlur="check_qq(this.value)" />
+                	<input type="text" placeholder="手机号" name="n_phone" onBlur="check_phone(this.value)" /><span id="tishi" style="color:red;"></span>
+                	<div class="text">
+                		<textarea class="textarea" name="n_why" placeholder="加入我们的原因(至少15字)"></textarea>
+                	</div>
+					<input type="submit" value="提交">{/literal}
+				</form>
+				
+			</div>
+			
+		  <div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--contact end here-->
+
+<!--footer start here-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-main">
+			<div class="col-md-4 footer-grid wow bounceIn" data-wow-delay="0.4s">
+			  <h3>校内友情链接</h3>
+			  <ul class="ftr-list">
+			  	<li><a href="http://www.nyist.net/">南阳理工学院 </a></li>
+			  	<li><a href="http://cie.nyist.edu.cn/">计算机与信息工程学院</a></li>
+			  	<li><a href="http://book.nyist.net/">图书馆 </a></li>
+			  	<li><a href="http://172.31.31.34/jwweb/">教务管理系统</a></li>
+			  	<li><a href="http://acm.nyist.net/">ACM在线测评系统</a></li>
+			  	<li><a href="http://weibo.com/u/3969932680?is_hot=1#_loginLayer_1479735030734">南工ACM校训队微博</a></li>
+			  	<li><a href="http://soft-bysj.nyist.net/fm360/">校园导航</a></li>
+			  </ul>
+			</div>
+			<div class="col-md-4 footer-grid wow bounceIn" data-wow-delay="0.4s">
+			  <h3>如何成为优秀程序员？</h3>
+			  <img src="{$smarty.const.images}/c4.jpg" alt=""/>
+			  <p>秉持对编程的乐趣和激情，你最需要的是坚持和努力，而不是机遇。一个优秀的程序员就是那种即使是过单行道都要往两边看的人。——Doug Linder</p>
+			  <div class="ftr-bwn">
+			<a href="http://www.codeceo.com/article/10-effective-way-good-programmer.html" class="hvr-pulse">Read More</a>
+			  </div>
+			</div>
+			<div class="col-md-4 footer-grid wow bounceIn" data-wow-delay="0.4s">
+			  <h3>TopCoder工作室-专业创新团队</h3>
+			  <P>我们有梦想，有追求，拥有学习算法的热情或者学习web设计和开发的强烈兴趣。我们拥有执着的精神和为梦想勇于拼搏的勇气。我们拥有强烈的上进心和责任心，以及具有团队中不可或缺的交流和分享能力！</P>
+			<!--   <h5>前辈： <a href="{$smarty.const.__APP__}/Inform/add">录入信息</a>  -->
+			  	
+			  </h5>
+			  <h5><a href="{$qq_link}">QQ群：{$qq}</a></h5> 
+			  <h5>博客：<a href="http://blog.sina.com.cn/u/3969932680">南工ACM校集训队</a></h5>
+			  <h5>地址：计算机与信息工程学院7#116</h5>
+			</div>
+		  <div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--footer end here-->
+<!--copyrights start here-->
+<div class="copyright">
+	<div class="container">
+		<div class="copyright-main wow bounceInLeft" data-wow-delay="0.4s">
+			<p>Copyrights &copy;2015 - {$time} Afford All rights reserved | Designed by Topcoder</a></p>
+      <p>备案号: 皖ICP备17013865号-2</a></p>
+		</div>
+	</div>
+</div>
+<!--copyrights end here-->
+
+</body>
+</html>
